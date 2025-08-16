@@ -1,4 +1,5 @@
-from utils import load_data, load_template
+from utils import load_data, load_template, armazena_coisas
+
 
 def index():
     note_template = load_template('components/note.html')
@@ -7,5 +8,10 @@ def index():
         for dados in load_data('notes.json')
     ]
     notes = '\n'.join(notes_li)
+    
 
     return load_template('index.html').format(notes=notes)
+
+
+def submit(titulo, detalhes):
+    armazena_coisas(titulo, detalhes)
