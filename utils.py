@@ -21,7 +21,7 @@ def armazena_coisas(titulo, detalhes):
     dicio_novo["detalhes"] = detalhes
     notes.append(dicio_novo)
     with open("static/data/notes.json", "w") as file:
-        json.dump (notes, file)
+        json.dump(notes, file)
 
  
 
