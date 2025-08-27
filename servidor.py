@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ def index():
     print(request.method)
     print(request.headers)
 
-    return ""
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
