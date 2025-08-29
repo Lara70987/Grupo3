@@ -15,11 +15,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
+} 
 
 /* Header */
 header {
-  background-color: #2d3748;
+  background-color: #1A202C;
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -38,17 +38,6 @@ nav {
   gap: 10px;
   font-weight: bold;
   font-size: 1.1rem;
-}
-
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background: linear-gradient(45deg, #f59e0b, #d97706);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
 }
 
 .nav-links {
@@ -87,8 +76,12 @@ nav {
 /* Hero Section */
 .hero {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #1A202C 100%);
   text-align: center;
+}
+
+.hero h1 .highlight-word {
+  color: #f59e0b; /* Laranja */
 }
 
 .hero h1 {
@@ -96,10 +89,7 @@ nav {
   font-weight: 700;
   margin-bottom: 2rem;
   line-height: 1.2;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff; /* Branco para o resto do texto */
 }
 
 .hero-description {
@@ -130,7 +120,7 @@ nav {
 }
 
 .about-highlight {
-  background: #2d3748;
+  background: #1A202C;
   padding: 2.5rem;
   border-radius: 12px;
   border: 1px solid #4a5568;
@@ -152,7 +142,7 @@ nav {
 /* Mission Vision Values */
 .mvv-section {
   padding: 4rem 0;
-  background: #2d3748;
+  background: #1A202C;
 }
 
 .mvv-grid {
@@ -207,7 +197,7 @@ nav {
 }
 
 .testimonial-card {
-  background: #2d3748;
+  background: #1A202C;
   padding: 2.5rem;
   border-radius: 12px;
   border: 1px solid #4a5568;
@@ -252,7 +242,7 @@ nav {
 /* Areas Section */
 .areas {
   padding: 4rem 0;
-  background: #2d3748;
+  background: #1A202C;
   text-align: center;
 }
 
