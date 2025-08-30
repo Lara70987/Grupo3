@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template
+from database import Database, Candidato
 
 app = Flask(__name__)
+db = Database("dados")
 
 @app.route('/')
 def index():
