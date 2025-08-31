@@ -1,19 +1,22 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from database import Database, Candidato
+from utils import save_data
 
 app = Flask(__name__)
-db = Database("dados")
 
 @app.route('/')
 def index():
-    print(request.method)
-    print(request.headers)
 
     return render_template('index.html')
 
-@app.route('/processo')
+@app.route('/processo', methods=['GET', 'POST'])
 def processo():
-    return render_template('processo.html')
+    if request.method == "GET":
+        return render_template('processo.html')
+    else:
+        form_data = request.form
+        save_data(form_data)
+        return redirect('/')
 
 @app.route('/time')
 def time():

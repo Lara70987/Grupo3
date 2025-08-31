@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <form method="post" class="form-processo" id="dados-candidato">
-  <script src="/home/rafaelvb/Desktop/InsperCode/Grupo3/static/js/script.js"></script>
-  <input type="" name="Nome" placeholder="Nome completo">
+  <input type="" name="name" placeholder="Nome completo">
   <input type="text" name="email" placeholder="Email do insper">
   <input type="text" name="phone" placeholder="Celular com DDD">
   <input type="text" name="matricula" placeholder="Número de matrícula">
@@ -16,5 +15,20 @@
     <option value="mec"> Engenharia Mecânica</option>
     <option value="mecat">Engenharia Mecatrônica</option>
   </select>
+  <select name="semestre" id="form-curso">
+    <option value="">--Semestre--</option>
+    <option value="1">1o semestre</option>
+    <option value="2">2o semestre</option>
+    <option value="3">3o semestre</option>
+    <option value="4">4o semestre</option>
+    <option value="5">5o semestre</option>
+    <option value="6">6o semestre</option>
+    <option value="7">7o semestre</option>
+    <option value="8">8o semestre</option>
+    <option value="9">9o semestre</option>
+    <option value="10">10o semestre</option>
+  </select>
+
+  <button type="submit">Enviar inscrição</button>
 </form>
 {% endblock content %}
