@@ -1,34 +1,87 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
-<form method="post" class="form-processo" id="dados-candidato">
-  <input type="" name="name" placeholder="Nome completo">
-  <input type="text" name="email" placeholder="Email do insper">
-  <input type="text" name="phone" placeholder="Celular com DDD">
-  <input type="text" name="matricula" placeholder="Número de matrícula">
-  <select name="course" id="form-curso">
-    <option value="">--Curso--</option>
-    <option value="econo">Economia</option>
-    <option value="adm">Administração</option>
-    <option value="dir">Direito</option>
-    <option value="ccomp">Ciência da Computação</option>
-    <option value="eng-comp">Engenharia da Computação</option>
-    <option value="mec"> Engenharia Mecânica</option>
-    <option value="mecat">Engenharia Mecatrônica</option>
-  </select>
-  <select name="semestre" id="form-curso">
-    <option value="">--Semestre--</option>
-    <option value="1">1o semestre</option>
-    <option value="2">2o semestre</option>
-    <option value="3">3o semestre</option>
-    <option value="4">4o semestre</option>
-    <option value="5">5o semestre</option>
-    <option value="6">6o semestre</option>
-    <option value="7">7o semestre</option>
-    <option value="8">8o semestre</option>
-    <option value="9">9o semestre</option>
-    <option value="10">10o semestre</option>
-  </select>
+  <main>
+    <link rel="stylesheet" href="../static/style/processo.css" />
+    <div class="upper-page">
+      <h1>Seja membro!</h1>
+      <div class="content">
+        <p id="desc">
+          <span>Domine a tecnologia por trás do Bitcoin!</span><br />
+          Na Blockchain Insper, você entende o protocolo, <br />
+          as motivações e aplica na prática <br />
+          com as maiores empresas do setor.
+        </p>
+        <form method="post" class="form-processo" id="dados-candidato">
+          <input type="" name="name" placeholder="Nome completo" />
+          <input type="email" name="email" placeholder="Email do insper" />
+          <input type="tel" name="phone" placeholder="Celular com DDD" />
+          <input type="text" name="matricula" placeholder="Número de matrícula" />
+          <select name="course" id="form-curso">
+            <option value="">--Curso--</option>
+            <option value="econo">Economia</option>
+            <option value="adm">Administração</option>
+            <option value="dir">Direito</option>
+            <option value="ccomp">Ciência da Computação</option>
+            <option value="eng-comp">Engenharia da Computação</option>
+            <option value="mec">Engenharia Mecânica</option>
+            <option value="mecat">Engenharia Mecatrônica</option>
+          </select>
+          <select name="semestre" id="form-curso">
+            <option value="">--Semestre--</option>
+            <option value="1">1o semestre</option>
+            <option value="2">2o semestre</option>
+            <option value="3">3o semestre</option>
+            <option value="4">4o semestre</option>
+            <option value="5">5o semestre</option>
+            <option value="6">6o semestre</option>
+            <option value="7">7o semestre</option>
+            <option value="8">8o semestre</option>
+            <option value="9">9o semestre</option>
+            <option value="10">10o semestre</option>
+          </select>
 
-  <button type="submit">Enviar inscrição</button>
-</form>
-{% endblock content %}
+          <button type="submit" class="cta-button">Enviar inscrição</button>
+        </form>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="fases">
+      <ul>
+        <li>
+          <h3>Primeira fase</h3>
+          <p>
+            Preenchimento de um Forms com
+            detalhes pessoais e perguntas de
+            caráter opinativo.
+          </p>
+        </li>
+
+        <li>
+          <h3>Segunda fase</h3>
+          <p>
+            Resolução de um case elaborado 
+            em parceria com o BTG 
+            e com a Mynt.
+          </p>
+        </li>
+
+        <li>
+          <h3>Terceira fase</h3>
+          <p>
+            Entrevista individual para conhecer 
+            melhor o candidato com perguntas 
+            pessoais e possivelmente técnicas.
+          </p>
+        </li>
+
+        <li>
+          <h3>Programa de Trainee</h3>
+          <p>
+            Curso de Introdução à Blockchain 
+            e Projeto Interno Aplicado 
+          </p>
+        </li>
+      </ul>
+    </div>
+  </main>
+{% endblock %}
