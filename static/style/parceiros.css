@@ -7,7 +7,7 @@ main {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
-  text-decoration: underline #FF0000;
+  color: #FF0000;
 }
 
 table {
