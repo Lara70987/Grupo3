@@ -1,0 +1,32 @@
+main {
+  margin-top: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: underline #FF0000;
+  margin-bottom: 2rem;
+}
+
+.areas {
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.areas > li {
+  display: flex;
+  flex-direction: column;
+  max-width: 35rem;
+  margin: 2rem;
+}
+
+.sep:empty {
+  margin: 0 -5rem 0 -5rem;
+  margin-top: 2rem;
+  border: 1px solid #FF0000;
+}
