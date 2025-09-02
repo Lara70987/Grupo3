@@ -1,6 +1,5 @@
 main {
   margin: 2rem;
-  margin-bottom: 15rem;
 }
 
 h1 {
@@ -17,12 +16,13 @@ h1 {
 
 .content {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
 
 .content > * {
-  margin: 2rem;
+  margin: 4rem;
 }
 
 #desc { 
@@ -41,16 +41,26 @@ form {
   border-radius: 7px;
   border: 1px solid white;
   width: 20rem;
-  padding: .5rem 0 .5rem 0;
+  padding: 1rem 0 1rem 0;
+}
+
+input:focus {
+  border: 2px solid #FF0000;
+  outline: none;
 }
 
 form > *:not(a) {
   background-color: inherit;
   color: lightgrey;
   border-radius: 5px;
-  margin: .2rem 0 .2rem 0;
+  margin: .3rem 0 .3rem 0;
   width: 80%;
   padding: 2px 0 2px 5px;
+}
+
+input, select {
+  height: 2rem;
+  font-size: medium;
 }
 
 #envia-form {
