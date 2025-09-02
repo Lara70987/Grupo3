@@ -74,6 +74,23 @@ nav {
   color: #ffffff;
 }
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9; /* torna responsivo */
+}
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 /* Hero Section */
 .hero {
   min-height: 80vh;

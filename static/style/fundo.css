@@ -1,4 +1,3 @@
-/* Reset simples */
 * {
   margin: 0;
   padding: 0;
@@ -7,138 +6,200 @@
 }
 
 body {
-  background: #0f172a;
+  background: #121212;
   color: #f8fafc;
   line-height: 1.6;
+  height: 100vh;
 }
 
-/* Cabeçalho */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #1e293b;
-  position: sticky;
-  top: 0;
-}
-
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #38bdf8;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #f8fafc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
-}
-
-/* Hero */
 .hero {
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom right, #1e293b, #0f172a);
+  padding: 4rem 2rem 0.5rem;
+  background: #121212;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5rem;
+  margin-bottom: 0rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .hero p {
   font-size: 1.2rem;
+  margin-bottom: 0rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight {
+  color: #FF0000; /* vermelho */
+}
+
+/* Indicadores */
+.indicators {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;  
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.indicators h2 {
+  font-size: 2.5rem;
   margin-bottom: 2rem;
+  font-weight: 600;
+  color: #FF0000;
 }
 
-.btn {
-  background: #38bdf8;
-  color: #0f172a;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.btn:hover {
-  background: #0ea5e9;
-}
-
-/* Cards */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 3rem 2rem;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #1e293b;
-  padding: 2rem;
+.indicator-card {
+  background: #121212;
+  padding: 2.5rem;
   border-radius: 12px;
-  width: 250px;
+  border: 1px solid #A10000;   /* mesma borda vermelha */
+  transition: all 0.3s ease;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 }
 
-.card h2 {
+.indicator-card:hover {
+  transform: translateY(-5px);
+  border-color: #FF0000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.indicator-info h3 {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #38bdf8;
-  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;   /* título vermelho */
 }
 
-/* Tabela */
-.table-section {
-  padding: 2rem;
+.indicator-icon {
+  width: 60px;
+  height: 60px;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
-.table-section h2 {
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #38bdf8;
+
+/* === (Opcional) faça o mesmo para a seção de Researches para manter consistência === */
+.researches {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 4rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #1e293b;
-  border-radius: 8px;
+.researches h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.research-card {
+  background: #1e2532;
+  border-radius: 12px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-th, td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #334155;
+.research-card:hover {
+  transform: translateY(-5px);
 }
 
-th {
-  background: #0f172a;
-  color: #38bdf8;
+.research-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #dc2626, #f59e0b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-tr:hover {
-  background: #334155;
+.avalanche-bg {
+  background: linear-gradient(135deg, #e53e3e, #3182ce);
 }
 
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #1e293b;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+.solana-bg {
+  background: linear-gradient(135deg, #9945ff, #14f195);
+}
+
+.polygon-bg {
+  background: linear-gradient(135deg, #8247e5, #4c1d95);
+}
+
+.research-image h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.research-content {
+  padding: 1.5rem;
+}
+
+.research-tag {
+  display: inline-block;
+  background: #dc2626;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.research-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.research-card p {
+  color: #b8c5d1;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.nav-links {
+  display: none;
+}
+              
+.indicators h2,
+.researches h2 {
+  font-size: 2rem;
+}
+
+.indicators-grid,
+.research-grid {
+  grid-template-columns: 1fr;
+}
 }
