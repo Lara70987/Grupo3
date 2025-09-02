@@ -1,5 +1,5 @@
 main {
-  margin-top: 2rem;
+  margin: 2rem;
 }
 
 .title {
@@ -7,4 +7,29 @@ main {
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+table {
+  border-spacing: 2rem;
+  margin: auto;
+  text-align: center;
+}
+
+td {
+  padding: 2rem;
+  border: 1px solid #FF0000;
+  border-radius: 10px;
+}
+
+.parc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.parc > img {
+  width: 12rem;
+  height: auto;
+  border-radius: 10px;
 }
