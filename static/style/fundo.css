@@ -14,21 +14,22 @@ body {
 
 .hero {
   text-align: center;
-  padding: 4rem 2rem 0.5rem;
   background: #121212;
-  height: auto;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 5rem;
-  margin-bottom: 0rem;
+  padding: 2rem 2rem 1rem;
+  margin-bottom: 0;
 }
+
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  color: #ff0000;
 }
 
 .hero p {
@@ -40,16 +41,16 @@ body {
 }
 
 .highlight {
-  color: #FF0000; /* vermelho */
+  color: #FF0000;
 }
 
-/* Indicadores */
 .indicators {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;  
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 0.5rem 20px 2rem;  
   text-align: center;
-  padding: 2rem;
   color: #ffffff;
 }
 
@@ -70,7 +71,7 @@ body {
   background: #121212;
   padding: 2.5rem;
   border-radius: 12px;
-  border: 1px solid #A10000;   /* mesma borda vermelha */
+  border: 1px solid #A10000;
   transition: all 0.3s ease;
   text-align: center;
 }
@@ -81,32 +82,53 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.indicator-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 0.5rem; 
+}
+
+.indicator-content img {
+  width: 32px; 
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 .indicator-info h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  color: #ffffff;   /* título vermelho */
+  color: #ffffff;
 }
 
 .indicator-icon {
   width: 60px;
   height: 60px;
-  background: #000000;
-  border-radius: 50%;
+  background: #000;
+  border-radius: 8px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   margin: 0 auto;
-  color: #ffffff;
+  overflow: hidden;
+}
+
+.indicator-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 
-/* === (Opcional) faça o mesmo para a seção de Researches para manter consistência === */
 .researches {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0  auto;
   padding: 0 20px 4rem;
+  text-align: center;
+  color: #ff0000;
 }
 
 .researches h2 {
@@ -122,67 +144,72 @@ body {
 }
 
 .research-card {
-  background: #1e2532;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  background: #000000;
   border-radius: 12px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border: 1px solid transparent;
 }
 
 .research-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  border-color: #A10000;
+}
+
+.research-card:focus-visible {
+  outline: 2px solid #FF0000;
+  outline-offset: 3px;
 }
 
 .research-image {
+ height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.research-card img { 
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, #dc2626, #f59e0b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.avalanche-bg {
-  background: linear-gradient(135deg, #e53e3e, #3182ce);
-}
-
-.solana-bg {
-  background: linear-gradient(135deg, #9945ff, #14f195);
-}
-
-.polygon-bg {
-  background: linear-gradient(135deg, #8247e5, #4c1d95);
-}
-
-.research-image h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  object-fit: cover;
+  display: block;
 }
 
 .research-content {
-  padding: 1.5rem;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:1.5rem;
+}
+
+.research-body{
+  margin-bottom:2rem;
 }
 
 .research-tag {
-  display: inline-block;
-  background: #dc2626;
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+  align-self:flex-end;
+  margin-top:auto; 
+  background:#dc2626;
+  color:#fff;
+  padding:.4rem .9rem;
+  border-radius:8px;
+  font-size:.8rem;
 }
 
 .research-card h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #ff0000;
 }
 
 .research-card p {
-  color: #b8c5d1;
+  color: #ffffff;
   line-height: 1.6;
   font-size: 0.95rem;
 }

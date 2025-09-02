@@ -20,65 +20,48 @@
   <section class="indicators">
     <h2>Indicadores</h2>
     <div class="indicators-grid">
-      <div class="indicator-card">
-        <div class="indicator-info">
-          <h3>Retorno acumulado</h3>
-        </div>
-        <div class="indicator-icon">₿</div>
+    <div class="indicator-card">
+      <div class="indicator-content">
+        <img src="{{ url_for('static', filename='img/researches/crypto.png') }}" alt="crypto">
+        <h3>Retorno acumulado</h3>
       </div>
-      <div class="indicator-card">
-        <div class="indicator-info">
-          <h3>Retorno anual médio</h3>
-        </div>
-        <div class="indicator-icon">💰</div>
+    </div>
+
+    <div class="indicator-card">
+      <div class="indicator-content">
+        <img src="{{ url_for('static', filename='img/researches/dinheiro.png') }}" alt="dinheiro">
+        <h3>Retorno anual médio</h3>
       </div>
-      <div class="indicator-card">
-        <div class="indicator-info">
-          <h3>Número de ativos</h3>
-        </div>
-        <div class="indicator-icon">📈</div>
+    </div>
+
+    <div class="indicator-card">
+      <div class="indicator-content">
+        <img src="{{ url_for('static', filename='img/researches/grafico.png') }}" alt="grafico">
+        <h3>Número de ativos</h3>
       </div>
+    </div>
     </div>
   </section>
 
-  <!-- Researches Section -->
-  <section class="researches">
-    <h2>Researches</h2>
-    <div class="research-grid">
-      <div class="research-card">
-        <div class="research-image avalanche-bg">
-          <h3>AVALANCHE</h3>
-        </div>
-        <div class="research-content">
-          <span class="research-tag">Research • 2022</span>
-          <h4>Avalanche</h4>
-          <p>A Avalanche é uma plataforma pública e open-source que conta com uma blockchain layer 1 que suporta tanto smart contracts como redes personalizáveis.</p>
-        </div>
-      </div>
+<section class="researches">
+  <h2>Researches</h2>
+<div class="research-grid">
+  {% for r in researches %}
+  <a class="research-card" href="{{ r.url }}" target="_blank" rel="noopener">
+  <div class="research-image"
+       style="background-image:url('{{ url_for('static', filename=r.img) }}')">
+  </div>
+<div class="research-content">
+  <div class="research-body">
+    <h4>{{ r.titulo }}</h4>
+    <p>{{ r.descricao }}</p>
+  </div>
 
-      <div class="research-card">
-        <div class="research-image solana-bg">
-          <h3>SOLANA</h3>
-        </div>
-        <div class="research-content">
-          <span class="research-tag">Research • 2022</span>
-          <h4>Solana</h4>
-          <p>A criptomoeda Solana (Sol) foi lançada em março de 2020, com o objetivo de rivalizar com a Ethereum, focando em capacidade de escalabilidade e com o objetivo de oferecer soluções financeiras de forma descentralizada</p>
-        </div>
-      </div>
-
-      <div class="research-card">
-        <div class="research-image polygon-bg">
-          <h3>📊</h3>
-        </div>
-        <div class="research-content">
-          <span class="research-tag">Research • 2022</span>
-          <h4>Polygon</h4>
-          <p>Criada em 2017, a MATIC é a moeda base do ecossistema Polygon, originalmente chamada de Rede Matic</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <span class="research-tag">Research • {{ r.ano }}</span>
+</div>
+  {% endfor %}
+</div>
+</section>
 
 </body>
 </html>
