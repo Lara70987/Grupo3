@@ -1,0 +1,33 @@
+.container-foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+#links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+a > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#links > li {
+  margin: 2rem;
+}
+
+.logo-icon > a > img {
+  width: 8rem;
+  height: 3rem;
+}
