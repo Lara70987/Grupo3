@@ -1,9 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
   <link rel="stylesheet" href="../static/style/time.css" />
-  <div id="gigante">
+  <div class="titulo">
     <h1>Conheça nosso time</h1>
   </div>
 
+  <ul id="membros">
+    <li class="membro-1">
+      <img src="../static/img/membros/felipe.jpeg" alt="Felipe" />
+      <div class="infos-membros">
+        <h3 class="nome">Felipe Santos</h3>
+        <span>Co-fundador e ex-membro</span>
+      </div>
+    </li>
 
+    <li class="membro-2">
+      <img src="../static/img/membros/bruno.jpeg" alt="Bruno" />
+      <div class="infos-membros">
+        <h3>Bruno Arthur</h3>
+        <span>Co-fundador e ex-membro</span>
+      </div>
+    </li>
+
+    <li class="membro-1">
+      <img src="../static/img/membros/joao.jpeg" alt="João" />
+      <div class="infos-membros">
+        <h3>João P. J. M. Perpetuo</h3>
+        <span>Co-fundador e ex-membro</span>
+      </div>
+    </li>
+  </ul>
 {% endblock %}
