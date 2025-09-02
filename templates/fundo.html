@@ -1,4 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlockchainSper Fund</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/fundo.css') }}">
+</head>
+<body>
 
+  <!-- Hero -->
+<section class="hero">
+  <h1>Fundo Blockchain Insper</h1>
+  <p>Nossa tese de investimento consiste em analisar os whitepapers de diversas criptomoedas, a partir disso avaliando sua aplicabilidade, escalabilidade e potencial de crescimento futuro. Dessa forma, realizamos a alocação de ativos do nosso fundo simulado.</p>
+</section>
+
+
+  <section class="indicators">
+    <h2>Indicadores</h2>
+    <div class="indicators-grid">
+      <div class="indicator-card">
+        <div class="indicator-info">
+          <h3>Retorno acumulado</h3>
+        </div>
+        <div class="indicator-icon">₿</div>
+      </div>
+      <div class="indicator-card">
+        <div class="indicator-info">
+          <h3>Retorno anual médio</h3>
+        </div>
+        <div class="indicator-icon">💰</div>
+      </div>
+      <div class="indicator-card">
+        <div class="indicator-info">
+          <h3>Número de ativos</h3>
+        </div>
+        <div class="indicator-icon">📈</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Researches Section -->
+  <section class="researches">
+    <h2>Researches</h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-image avalanche-bg">
+          <h3>AVALANCHE</h3>
+        </div>
+        <div class="research-content">
+          <span class="research-tag">Research • 2022</span>
+          <h4>Avalanche</h4>
+          <p>A Avalanche é uma plataforma pública e open-source que conta com uma blockchain layer 1 que suporta tanto smart contracts como redes personalizáveis.</p>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-image solana-bg">
+          <h3>SOLANA</h3>
+        </div>
+        <div class="research-content">
+          <span class="research-tag">Research • 2022</span>
+          <h4>Solana</h4>
+          <p>A criptomoeda Solana (Sol) foi lançada em março de 2020, com o objetivo de rivalizar com a Ethereum, focando em capacidade de escalabilidade e com o objetivo de oferecer soluções financeiras de forma descentralizada</p>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-image polygon-bg">
+          <h3>📊</h3>
+        </div>
+        <div class="research-content">
+          <span class="research-tag">Research • 2022</span>
+          <h4>Polygon</h4>
+          <p>Criada em 2017, a MATIC é a moeda base do ecossistema Polygon, originalmente chamada de Rede Matic</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
 {% endblock content %}
